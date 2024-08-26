@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <img class="LogoAluraLatam" src="./assets/LogoAlura.png" alt="Logo de Alura Latam">
+    </header>
+    <!-- Encriptador -->
+    <main>    
+        <section class="encriptador">
+            <div class="encriptador-texto">
+                <h1 class="encriptador-texto-titulo">¡Bienvenido al encriptador de texto!</h1>
+                <p class="encriptador-texto-p">Utilize esta página para encriptar o desencriptar texto</p>
+            </div>
+            <input class="cuadro-de-encriptado" type="text" placeholder="Ingrese el texto aquí..."/>
+            <div class="encriptador-reglas">
+                <img src="./assets/aviso.svg" alt="Imagen-aviso" class="aviso-regla">
+                <p class="texto-regla">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptador-botones">
+                <button type="submit" class="boton-encriptar">Encriptar</button>
+                <button type="submit" class="boton-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="encriptador-resultado">
+            <div class="contenedor-resultado">
+                <img src="./assets/lupa.png" alt="Imagen_Lupa" class="imagen-lupa">
+                <p class="texto-v1">Ningún mensaje encriptado</p>
+                <p class="texto-v2">Ingreso el texto a encriptar o desencriptar</p>
+            </div>
+            <input type="text" class="resultado" readonly/>
+            <button type="submit" class="boton-copiar">Copiar</button> 
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <p class="footer">©2024 Encriptador de texto | Desarrollado por Héctor Ramírez</p>
+    </footer>
+</body>
+</html>

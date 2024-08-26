@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moderustic:wght@300..800&display=swap');
+
+:root {
+    --color-primario: #55679C;
+    --color-secundario: #7C93C3;
+    --color-terciario: #353535;
+    --color-fondo: #F5EDED;
+    --color-fondo-contenedor: #E2DAD6;
+    --color-hover: #94aace;
+    --color-hover-2: #cdcdcd;
+    --color-texto-boton: #FFF5E4;
+    --color-boton-desencriptar: #e6e6e6;
+    --fuente-moderustic: "Moderustic", sans-serif;
+    --fuente-inter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    padding: 3% 1% 2%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.encriptador-texto-titulo {
+    font-family: var(--fuente-moderustic);
+    font-size: 1.8rem;
+    font-style: normal;
+    gap: 30px;
+    color: var(--color-primario);
+}
+
+.encriptador-texto-p {
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    color: var(--color-terciario);
+    gap: 1.5rem;
+}
+
+.encriptador {
+    width: 50%;
+    margin: 180px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: transparent;
+}
+
+.cuadro-de-encriptado {
+    width: 680px;
+    height: 350px;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid var(--color-terciario);
+    border-radius: 10px;
+}
+
+.cuadro-de-encriptado::placeholder,:focus{
+    color: var(--color-secundario);
+}
+
+.encriptador-reglas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0%;
+    gap: 6px;
+}
+
+.texto-regla {
+    width: 100%;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 130%;
+    opacity: 0.7;
+    color: var(--color-terciario);
+}
+
+.encriptador-botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.boton-encriptar {
+    width: 180px;
+    height: 65px;
+    padding: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-primario);
+    border-radius: 15px;
+}
+
+.boton-desencriptar {
+    width: 180px;
+    height: 65px;
+    padding: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-primario);
+    background-color: var(--color-boton-desencriptar);
+    border: 2px solid var(--color-primario);
+    border-radius: 15px;
+}
+
+.boton-encriptar:hover {
+    background-color: var(--color-hover);
+}
+
+.boton-desencriptar:hover {
+    background-color: var(--color-hover-2);
+}
+
+.encriptador-resultado {
+    width: 500px;
+    height: 700px;
+    position: relative;
+    margin-top: 100px;
+    border-radius: 25px;
+    text-align: center;
+    background: var(--color-fondo-contenedor);
+}
+
+.contenedor-resultado {
+    width: 300px;
+    margin: auto;
+    margin-top: 20%;
+    background: var(--color-fondo-contenedor);
+
+}
+
+.imagen-lupa {
+    background: var(--color-fondo-contenedor);
+}
+
+.texto-v1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 160%;
+    text-align: center;
+    color: var(--color-primario);
+    background: var(--color-fondo-contenedor);
+}
+
+.texto-v2 {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-secundario);
+    background: var(--color-fondo-contenedor);
+}
+
+.resultado {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    padding: 35px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-secundario);
+    background: transparent;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    resize: none;
+}
+
+.resultado:focus {
+    outline: none;
+}
+
+.boton-copiar {
+    width: 180px;
+    height: 65px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    font-style: normal;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-primario);
+    border-radius: 15px;
+}
+
+.boton-copiar:hover{
+    background-color: var(--color-hover);
+}
+
+.footer {
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 560;
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        padding: 2px;
+    }
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 62% auto;
+        margin: auto;
+        gap: 1rem;
+    }
+    
+    .encriptador {
+        margin: 100px 0px 0px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .cuadro-de-encriptado {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-reglas {
+        position: inherit;
+        margin: 15px;
+    }
+
+    .encriptador-resultado {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .contenedor-resultado {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        bottom: 20%;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .imagen-lupa {
+        display: none;
+    }
+
+    .boton-copiar {
+        position: inherit;
+        width: 100%;
+    }
+
+    .resultado {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+    }
+}
+
