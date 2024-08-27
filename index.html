@@ -7,40 +7,28 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header class="header">
-        <img class="LogoAluraLatam" src="./assets/LogoAlura.png" alt="Logo de Alura Latam">
+    <header>
+        <img src="./assets/LogoAlura.png" class="logo" alt="logo-de-alura"/>
     </header>
-    <!-- Encriptador -->
-    <main>    
-        <section class="encriptador">
-            <div class="encriptador-texto">
-                <h1 class="encriptador-texto-titulo">¡Bienvenido al encriptador de texto!</h1>
-                <p class="encriptador-texto-p">Utilize esta página para encriptar o desencriptar texto</p>
+    <main>
+        <section>
+            <textarea class="encriptador" cols="30" rows="10" placeholder="Ingrese el texto aquí..."></textarea>
+            <div>
+                <h6 class="reglas">Solo letras minúsculas y sin acentos</h6>
             </div>
-            <input class="cuadro-de-encriptado" type="text" placeholder="Ingrese el texto aquí..."/>
-            <div class="encriptador-reglas">
-                <img src="./assets/aviso.svg" alt="Imagen-aviso" class="aviso-regla">
-                <p class="texto-regla">Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="encriptador-botones">
-                <button type="submit" class="boton-encriptar">Encriptar</button>
-                <button type="submit" class="boton-desencriptar">Desencriptar</button>
+            <div class="botones">
+                <button type="submit" onclick="botonEncriptar()" class="boton-encriptar">Encriptar</button>
+                <button type="submit" onclick="botonDesencriptar()" class="boton-desencriptar">Desencriptar</button>
             </div>
         </section>
-        <section class="encriptador-resultado">
-            <div class="contenedor-resultado">
-                <img src="./assets/lupa.png" alt="Imagen_Lupa" class="imagen-lupa">
-                <p class="texto-v1">Ningún mensaje encriptado</p>
-                <p class="texto-v2">Ingreso el texto a encriptar o desencriptar</p>
+            <textarea class="resultado" cols="25" rows="15" readonly></textarea>
+            <div>
+            <button type="submit" onclick="botonCopiar()" class="boton-copiar">Copiar</button>
             </div>
-            <input type="text" class="resultado" readonly/>
-            <button type="submit" class="boton-copiar">Copiar</button> 
-        </section>
     </main>
-    <!-- Pie de página -->
     <footer>
         <p class="footer">©2024 Encriptador de texto | Desarrollado por Héctor Ramírez</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
